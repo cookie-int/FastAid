@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/ict-notes.css" />
+    <title>IICT</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <a href="/index.html">
+        <img
+          class="nav-logo"
+          src="/assets/FastAid Logo banner.png"
+          alt="FastAid Logo"
+        />
+      </a>
+
+      <div class="nav-links-container">
+        <a class="nav-link" href="/index.html">Home</a>
+        <a class="nav-link" href="/courses.html">Courses</a>
+        <a class="nav-link" href="#about">About</a>
+
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div
+      style="
+        margin-top: 20px;
+        padding-left: 20px;
+        display: flex;
+        gap: 20px;
+        padding-right: 50px;
+      "
+    >
+      <div>
+        <!-- Course Outline -->
+        <div class="dropdown">
+          
+          <label
+            
+            class="dropdown-trigger"
+            onclick="loadNote('notes-ict/0-course-outline.html')"
+            data-title="Course Outline"
+          ></label>
+        </div>
+        <!-- Computer History -->
+        <div class="dropdown">
+          <input type="checkbox" id="drop-1" class="dropdown-toggle" />
+          <label
+            for="drop-1"
+            class="dropdown-trigger"
+            data-title="Computer History"
+          ></label>
+
+          <ul class="dropdown-list">
+            <article
+              class="dropdown-item"
+              onclick="loadNote('notes-ict/1-comp-history.html')"
+            >
+              Generations
+            </article>
+            <article
+              class="dropdown-item"
+              onclick="loadNote('notes-ict/2-comp-applications.html')"
+            >
+              Applications
+            </article>
+          </ul>
+        </div>
+
+        <!-- Computer Hardware & Architecture -->
+        <div class="dropdown">
+          <input type="checkbox" id="drop-2" class="dropdown-toggle" />
+          <label
+            for="drop-2"
+            class="dropdown-trigger"
+            data-title="Computer Hardware & Architecture"
+          ></label>
+
+          <ul class="dropdown-list">
+            <article class="dropdown-item"
+              onclick="loadNote('notes-ict/3-input-output.html')"
+            >Input/Output Devices</article>
+            
+            <article class="dropdown-item"
+            onclick="loadNote('notes-ict/4-storage.html')"
+            >Storage Devices</article>
+            <article class="dropdown-item"
+            onclick="loadNote('notes-ict/5-cpu.html')"
+            >CPU</article>
+            <article class="dropdown-item"
+            onclick="loadNote('notes-ict/6-language.html')"
+            >Language of Computer</article>
+          </ul>
+        </div>
+
+        <!-- Information Systems -->
+        <div class="dropdown">
+          <input type="checkbox" id="drop-3" class="dropdown-toggle" />
+          <label
+            for="drop-3"
+            class="dropdown-trigger"
+            data-title="Information Systems"
+          ></label>
+
+          <ul class="dropdown-list">
+            <article class="dropdown-item"
+            onclick="loadNote('notes-ict/7-information-system.html')"
+            >What is Information System?</article>
+            <article class="dropdown-item"
+            onclick="loadNote('notes-ict/8-hardware.html')"
+            >Hardware</article>
+            <article class="dropdown-item"
+            onclick="loadNote('notes-ict/9-software.html')"
+            >Software</article>
+            <article class="dropdown-item"
+            onclick="loadNote('notes-ict/10-data.html')"
+            >Data</article>
+            <article class="dropdown-item" 
+            onclick="loadNote('notes-ict/11-networks-people.html')"
+            >Networks & People</article>
+            <article class="dropdown-item"
+            onclick="loadNote('notes-ict/12-machine-cycle.html')"
+            >Machine Cycle</article>
+          </ul>
+        </div>
+
+        <!-- Number System & Conversions -->
+        <div class="dropdown">
+          <input type="checkbox" id="drop-4" class="dropdown-toggle" />
+          <label
+            for="drop-4"
+            class="dropdown-trigger"
+            data-title="Number System & Conversions"
+          ></label>
+
+          <ul class="dropdown-list">
+            <article class="dropdown-item"onclick="loadNote('notes-ict/13-introduction-number-systems.html')">
+              Introduction to Number Systems
+            </article>
+            <article class="dropdown-item"onclick="loadNote('notes-ict/14-denary.html')">Denary</article>
+            <article class="dropdown-item"onclick="loadNote('notes-ict/15-binary.html')">Binary</article>
+            <article class="dropdown-item"onclick="loadNote('notes-ict/17-hexadecimal.html')">Hexadecimal</article>
+            <article class="dropdown-item"onclick="loadNote('notes-ict/16-octal.html')">Octal</article>
+            <article class="dropdown-item"onclick="loadNote('notes-ict/18-conversions.html')">Conversions</article>
+            <article class="dropdown-item"onclick="loadNote('notes-ict/19-binary-arithmetic.html')">Binary Arithmetic</article>
+            <article class="dropdown-item"onclick="loadNote('notes-ict/20-floating-point.html')">
+              Floati ng Point Representation
+            </article>
+          </ul>
+        </div>
+
+        <!-- Communication Networks -->
+        <div class="dropdown">
+          <input type="checkbox" id="drop-5" class="dropdown-toggle" />
+          <label
+            for="drop-5"
+            class="dropdown-trigger"
+            data-title="Communication Networks"
+          ></label>
+
+          <ul class="dropdown-list">
+            <article class="dropdown-item">What is Communication?</article>
+            <article class="dropdown-item">
+              Components of a Communication System
+            </article>
+            <article class="dropdown-item">Network and Topologies</article>
+            <article class="dropdown-item">The Internet</article>
+          </ul>
+        </div>
+
+        <!-- Introduction to Operating System -->
+        <div class="dropdown">
+          <input type="checkbox" id="drop-6" class="dropdown-toggle" />
+          <label
+            for="drop-6"
+            class="dropdown-trigger"
+            data-title="Introduction to Operating System"
+          ></label>
+
+          <ul class="dropdown-list">
+            <article class="dropdown-item">What is OS?</article>
+            <article class="dropdown-item">Types of OS</article>
+            <article class="dropdown-item">Types of Interfaces</article>
+            <article class="dropdown-item">OS Architecture</article>
+            <article class="dropdown-item">Types of System Calls</article>
+            <article class="dropdown-item">I/O Structure</article>
+            <article class="dropdown-item">Virtual Machines</article>
+            <article class="dropdown-item">
+              Functions of Operating Systems
+            </article>
+          </ul>
+        </div>
+
+        <!-- Microsoft Office -->
+        <div class="dropdown">
+          <input type="checkbox" id="drop-7" class="dropdown-toggle" />
+          <label
+            for="drop-7"
+            class="dropdown-trigger"
+            data-title="Microsoft Office"
+          ></label>
+
+          <ul class="dropdown-list">
+            <article class="dropdown-item">MS Word</article>
+            <article class="dropdown-item">MS PowerPoint</article>
+            <article class="dropdown-item">MS Excel</article>
+          </ul>
+        </div>
+
+        <!-- Web Development -->
+        <div class="dropdown">
+          <input type="checkbox" id="drop-8" class="dropdown-toggle" />
+          <label
+            for="drop-8"
+            class="dropdown-trigger"
+            data-title="Web Development"
+          ></label>
+
+          <ul class="dropdown-list">
+            <article class="dropdown-item">Introduction to WebDev</article>
+            <article class="dropdown-item">HTML</article>
+            <article class="dropdown-item">CSS</article>
+            <article class="dropdown-item">JavaScript</article>
+          </ul>
+        </div>
+      </div>
+      <div id="notes-container"><div class="note-card">
+  <!-- Heading -->
+  <h2 class="note-title">CL1001: Introduction to Information and Communication Technology</h2>
+
+  <!-- Course Info -->
+  <h3 class="note-subtitle" style="color:#1c6dd0;">Course Information</h3>
+  <p class="note-paragraph">
+    <strong>Institution:</strong> National University of Computer & Emerging Sciences, Islamabad<br>
+    <strong>Credit Hours:</strong> 1 (3 Lab contact hours)<br>
+    <strong>Prerequisites:</strong> None<br>
+    <strong>Grading Policy:</strong> Absolute, as per NUCES policy<br>
+    <strong>Plagiarism Policy:</strong> Plagiarism in projects or exams may result in an F grade. Plagiarism in assignments results in zero marks in that category.<br>
+    <strong>URL:</strong> <a href="http://slate.nu.edu.pk" target="_blank">http://slate.nu.edu.pk</a>
+  </p>
+
+  <!-- Assessment -->
+  <h3 class="note-subtitle" style="color:#1c6dd0;">Assessment Breakdown</h3>
+  <table class="note-table" style="border:1px solid #ccc; border-collapse: collapse; width:100%;">
+    <thead>
+      <tr style="background-color:#f2f2f2;">
+        <th style="border:1px solid #ccc; padding:5px;">Assessment Item</th>
+        <th style="border:1px solid #ccc; padding:5px;">Number</th>
+        <th style="border:1px solid #ccc; padding:5px;">Weight (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="border:1px solid #ccc; padding:5px;">Assignments</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">10</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">Lab Work</td><td style="border:1px solid #ccc; padding:5px;">5</td><td style="border:1px solid #ccc; padding:5px;">15</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">Quizzes</td><td style="border:1px solid #ccc; padding:5px;">4</td><td style="border:1px solid #ccc; padding:5px;">10</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">Class Participation</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">5</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">Project</td><td style="border:1px solid #ccc; padding:5px;">1</td><td style="border:1px solid #ccc; padding:5px;">15</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">Final Exam</td><td style="border:1px solid #ccc; padding:5px;">1</td><td style="border:1px solid #ccc; padding:5px;">45</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Course Description -->
+  <h3 class="note-subtitle" style="color:#1c6dd0;">Course Description</h3>
+  <p class="note-paragraph">
+    This course provides a comprehensive introduction to computer systems, software, hardware, and architectures. Students will learn:
+    <ul>
+      <li>History and evolution of computers</li>
+      <li>Fundamentals of Information Systems</li>
+      <li>Number systems and arithmetic</li>
+      <li>Applications software: document processing, spreadsheets, presentations, databases</li>
+      <li>System software and development</li>
+      <li>Web and internet services</li>
+      <li>Introduction to operating systems and computer networks</li>
+    </ul>
+  </p>
+
+  <!-- Course Learning Outcomes -->
+  <h3 class="note-subtitle" style="color:#1c6dd0;">Course Learning Outcomes (CLOs)</h3>
+  <ul class="note-list">
+    <li>Understand computer systems, hardware, and software technologies</li>
+    <li>Learn basic logic, algorithms, and number system arithmetic</li>
+    <li>Gain practical knowledge of applications software</li>
+    <li>Learn basic web development using HTML, CSS, and JavaScript</li>
+    <li>Understand operating systems and network communication technologies</li>
+  </ul>
+
+  <!-- Weekly Topics -->
+  <h3 class="note-subtitle" style="color:#1c6dd0;">Course Topics & Weekly Plan</h3>
+  <table class="note-table" style="border:1px solid #ccc; border-collapse: collapse; width:100%;">
+    <thead>
+      <tr style="background-color:#f2f2f2;">
+        <th style="border:1px solid #ccc; padding:5px;">Week</th>
+        <th style="border:1px solid #ccc; padding:5px;">Topic / Lab</th>
+        <th style="border:1px solid #ccc; padding:5px;">Contact Hours</th>
+        <th style="border:1px solid #ccc; padding:5px;">CLO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="border:1px solid #ccc; padding:5px;">1</td><td style="border:1px solid #ccc; padding:5px;">Introduction & History of Computers</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">1</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">2</td><td style="border:1px solid #ccc; padding:5px;">Computer Hardware & Architecture, Storage Technologies</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">1</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">Number Systems & Conversions, Binary Arithmetic</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">2</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">4</td><td style="border:1px solid #ccc; padding:5px;">Floating Point Representation, Complements</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">1</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">5</td><td style="border:1px solid #ccc; padding:5px;">Operating Systems: Windows/Linux, File Management</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">3</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">6</td><td style="border:1px solid #ccc; padding:5px;">Introduction to Communication & Computer Networks</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">3</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">7</td><td style="border:1px solid #ccc; padding:5px;">Microsoft Word: Document Creation & Editing</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">3</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">8</td><td style="border:1px solid #ccc; padding:5px;">Microsoft PowerPoint: Presentations & Slides</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">3</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">9</td><td style="border:1px solid #ccc; padding:5px;">Microsoft Excel: Data Manipulation & Analysis</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">4</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">10-12</td><td style="border:1px solid #ccc; padding:5px;">Web Development: HTML, CSS, JavaScript</td><td style="border:1px solid #ccc; padding:5px;">9</td><td style="border:1px solid #ccc; padding:5px;">5</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">13</td><td style="border:1px solid #ccc; padding:5px;">Human-Computer Interaction (HCI)</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">4</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">14</td><td style="border:1px solid #ccc; padding:5px;">Prompt Engineering & Generative AI</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">4</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">15</td><td style="border:1px solid #ccc; padding:5px;">Professional Societies & Online Learning Platforms</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">2</td></tr>
+      <tr><td style="border:1px solid #ccc; padding:5px;">16</td><td style="border:1px solid #ccc; padding:5px;">Project Submission & Presentations</td><td style="border:1px solid #ccc; padding:5px;">3</td><td style="border:1px solid #ccc; padding:5px;">3</td></tr>
+    </tbody>
+  </table>
+</div>
+</div>
+    </div>
+    <script>
+      function loadNote(file) {
+        fetch(file)
+          .then((response) => response.text())
+          .then((html) => {
+            document.getElementById("notes-container").innerHTML = html;
+          })
+          .catch((err) => console.error("Error loading note:", err));
+      }
+    </script>
+    <footer class="footer">
+      <p>© 2025 FastAid. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
