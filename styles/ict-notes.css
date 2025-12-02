@@ -1,0 +1,261 @@
+body {
+  background: linear-gradient(135deg, #d6f0ff, #b0e0ff);
+
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+.nav-bar {
+  background-color: #1c2e4a;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-logo {
+  width: 200px;
+  height: auto;
+}
+
+.nav-links-container {
+  display: inline-flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0795de;
+  transform: translateY(-2px);
+}
+
+/* Existing styles remain as you wrote */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+/* Responsive Nav */
+@media screen and (max-width: 768px) {
+  .nav-links-container {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #52677d;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    gap: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links-container.active {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Container */
+.dropdown {
+  width: 300px;
+  border: 1px solid #c1c2c5;
+  border-radius: 12px;
+  background: white;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  transition: 300ms;
+}
+
+/* Hidden checkbox */
+.dropdown-toggle {
+  display: none;
+}
+
+/* Trigger row */
+.dropdown-trigger {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  position: relative;
+  font-weight: 600;
+}
+
+/* Title injected from data-title */
+.dropdown-trigger::after {
+  content: attr(data-title);
+  flex-grow: 1;
+}
+
+/* Arrow */
+.dropdown-trigger::before {
+  content: "›";
+  font-size: 22px;
+  transform: rotate(-90deg);
+  transition: 300ms ease;
+}
+
+/* Arrow rotates on open */
+.dropdown-toggle:checked + .dropdown-trigger::before {
+  transform: rotate(90deg);
+}
+
+/* Dropdown list */
+.dropdown-list {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 400ms ease;
+}
+
+/* Expand list when checked */
+.dropdown-toggle:checked ~ .dropdown-list {
+  max-height: 500px;
+  opacity: 1;
+  padding: 0 1rem 1rem;
+}
+
+/* Subtopic item */
+.dropdown-item {
+  padding: 0.8rem;
+  border: 1px solid #c1c2c5;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f0f4f8;
+}
+
+.note-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  font-family: "Montserrat", sans-serif;
+}
+
+.note-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1c2e4a;
+}
+
+.note-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0a7cff;
+}
+
+.note-paragraph {
+  font-size: 16px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.note-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.note-code {
+  background: #f5f5f5;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "Courier New", monospace;
+  margin-bottom: 12px;
+}
+
+.note-list {
+  margin-bottom: 12px;
+  padding-left: 20px;
+}
+
+.note-list li {
+  margin-bottom: 6px;
+}
+
+.note-link a {
+  color: #0a7cff;
+  text-decoration: underline;
+}
+
+.note-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 14px;
+}
+
+.note-table th,
+.note-table td {
+  border: 1px solid #c1c2c5;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.note-table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+footer.footer {
+  background-color: #1c2e4a;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 35px;
+}
